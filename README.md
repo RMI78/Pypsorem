@@ -1,5 +1,25 @@
 # Pypsorem
-PyPsorem is a Python script that generates Lorem Ipsum text according to your needs. Whether you need paragraphs, words, lists, or bytes of placeholder text, PyPsorem can provide it for you quickly and easily.
+Pypsorem is a Python script that generates Lorem Ipsum text according to your needs. Whether you need paragraphs, words, lists, or bytes of placeholder text, Pypsorem can provide it for you quickly and easily.
+This script has a Command-line Interface that provides a service API for [lipsum.com](https://lipsum.com), which you may or may not know as the go-to place to generate arbitrary dummy text whenever you need it. 
+This Python code is also inspired by [node-lipsum](https://github.com/traviskaufman/node-lipsum), a NodeJS Module equivalent written in CoffeeScript.
+
+
+# Installation
+
+First of all, clone this repository
+```Bash
+git clone https://github.com/RMI78/Pypsorem
+```
+
+then run setup.py to build the package :
+```Bash
+python setup.py sdist bdist_wheel
+```
+
+and finally, install it via pip :
+```Bash
+pip install /path/to/dist/package_name-version.whl
+```
 
 # Usage
 
@@ -19,5 +39,5 @@ From here, you can pipe the output of Pypsorem to other softwares or appends to 
 
 # License
 
-PyPsorem is licensed under the MIT License. See the LICENSE file for more information.
+Pypsorem is licensed under the MIT License. See the LICENSE file for more information.
 
