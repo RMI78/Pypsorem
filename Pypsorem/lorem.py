@@ -11,7 +11,13 @@ class Lorem():
 
     def __req(self) -> None:
         booleanStart = 'yes' if self.startLorem else 'no'
-        self._request = httpx.get(f'https://www.lipsum.com/feed/html?amount={self.amount}&what={self.dataFormat}&start={booleanStart}&generate=Generate+lorem+Ipsum')
+        try:
+            self._request = httpx.get(f'https://www.lipsum.com/feed/html?amount={self.amount}&what={self.dataFormat}&start={booleanStart}&generate=Generate+lorem+Ipsum')
+            self._request.raise_for_status()
+        except httpx.RequestError as err:
+            print(f"An error occurred while making the request: {err}")
+        except httpx.HTTPStatusError as err:
+            print(f"HTTP status error: {err}")
 
     def __parse(self) -> None:
         self._htmlParsing = BeautifulSoup(self._request.text, 'html.parser').find(id="lipsum").get_text()
