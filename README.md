@@ -23,12 +23,12 @@ pip install /path/to/dist/package_name-version.whl
 
 # Usage
 
-To use PyPsorem, simply run the pypsorem command followed by the arguments you want to use. PyPsorem accepts the following arguments:
+To use Pypsorem, simply run the pypsorem command followed by the arguments you want to use. PyPsorem accepts the following arguments:
 
     -v or --version: Displays the current version of PyPsorem and exits.
     -s or --start-with-lipsum: Whether or not your text starts with the classic "Lorem Ipsum" placeholder text. Defaults to False.
-    -w or --what: The type of text you want to generate. Valid options are "paras" (paragraphs), "words", "lists", or "bytes". Defaults to "paras".
-    -a or --amount: The number of text structures you want to generate. Defaults to 5.
+    -w or --what: The type of text you want to generate. Valid options are "lists"/"paras" (paragraphs), "words", "lists", or "bytes". Defaults to "paras".
+    -a or --amount: The number of text structures you want to generate. 
 
 For example, to generate 10 paragraphs of Lorem Ipsum text that start with the classic "Lorem Ipsum" placeholder, you would run the following command:
 ```Python
@@ -40,4 +40,3 @@ From here, you can pipe the output of Pypsorem to other softwares or appends to 
 # License
 
 Pypsorem is licensed under the MIT License. See the LICENSE file for more information.
-
